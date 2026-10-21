@@ -1,4 +1,8 @@
+[![Version](https://img.shields.io/github/v/release/Screenly/simple-message-app)](https://github.com/Screenly/simple-message-app/releases/latest)
+
 # Simple Message App
+
+![Simple Message App Preview](/screenshots/1920x1080.webp)
 
 ## Getting Started
 
