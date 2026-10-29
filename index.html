@@ -6,21 +6,51 @@
     <title>Simple Message App</title>
     <script src="screenly.js?version=1"></script>
   </head>
-  <body>
+  <body
+    class="bg-[url('/static/images/bg.webp')] bg-no-repeat bg-center bg-cover bg-[#171e24] before:content-[''] before:fixed before:inset-0 before:z-[var(--z-index-backdrop)] before:pointer-events-none before:bg-black/20 before:backdrop-blur-[7px]"
+  >
     <auto-scaler
       reference-width="1920"
       reference-height="1080"
       orientation="auto"
+      class="relative z-[var(--z-index-content)]"
     >
-      <div id="app">
-        <app-header show-logo show-time show-date></app-header>
-        <div id="left-content">
-          <span id="announcement-label">Announcement</span>
-          <h1 id="message-header"></h1>
-          <div id="date-badge"></div>
+      <div
+        id="app"
+        class="relative w-full h-full text-white portrait:flex portrait:flex-col portrait:p-[1.25em]"
+      >
+        <app-header
+          show-logo
+          show-time
+          show-date
+          class="absolute left-[1.3125em] top-[1.5625em] w-[calc(100%-2.625em)] portrait:static portrait:w-full"
+        ></app-header>
+        <div
+          id="left-content"
+          class="absolute left-[calc(8.33%+8.25em)] top-[15.5em] w-[32.25em] flex flex-col gap-[1em] portrait:static portrait:w-full portrait:mt-[15em] portrait:gap-[1em]"
+        >
+          <span
+            id="announcement-label"
+            class="font-light text-[1.44em] leading-[normal] tracking-[-0.0182em] text-white/90 portrait:text-[3.5em] portrait:font-medium portrait:leading-[1.25] portrait:tracking-[normal] portrait:pl-0"
+            >Announcement</span
+          >
+          <h1
+            id="message-header"
+            class="m-0 text-[4em] font-normal leading-[normal] text-white whitespace-pre-wrap break-words portrait:text-[7em] portrait:font-normal portrait:leading-[1.179]"
+          ></h1>
+          <div
+            id="date-badge"
+            class="inline-flex items-center h-[2.031em] w-fit py-[0.417em] px-[0.781em] border-[0.0875em] border-white/6 rounded-[0.885em] bg-[linear-gradient(167deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0.01)_100%)] shadow-[0_0.677em_2.083em_rgba(0,0,0,0.15),inset_0_0.0875em_0_rgba(255,255,255,0.1),inset_0_-0.0875em_0_rgba(255,255,255,0.03)] text-[1.2em] font-light leading-[normal] text-white/95 tracking-[-0.01em] portrait:text-[2.8125em] portrait:font-normal portrait:leading-[1.311] portrait:py-[0.5em] portrait:px-[1em] portrait:rounded-[1.05em] portrait:mt-[0.5em]"
+          ></div>
         </div>
-        <div id="message-body-card">
-          <div id="message-body"></div>
+        <div
+          id="message-body-card"
+          class="absolute left-[calc(50%+3.5em)] top-[12.0625em] w-[37.8125em] h-[47.9375em] border-[0.047em] border-white/10 rounded-[1.5em] p-[2em] overflow-hidden bg-[linear-gradient(90deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),linear-gradient(128deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.02)_100%)] shadow-[inset_0_0.047em_0_rgba(255,255,255,0.15),inset_0_-0.047em_0_rgba(255,255,255,0.05)] portrait:static portrait:w-full portrait:mt-[10em] portrait:h-[45.75em] portrait:rounded-[1.5em] portrait:p-[2em]"
+        >
+          <div
+            id="message-body"
+            class="text-[1.875em] font-light leading-[1.333] text-white whitespace-pre-wrap break-words portrait:text-[2.375em] portrait:font-light portrait:leading-[1.25]"
+          ></div>
         </div>
       </div>
     </auto-scaler>
